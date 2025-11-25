@@ -1,6 +1,15 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-import * as Tone from 'tone';
+// استبدل سطر الاستيراد القديم بهذا البلوك بالكامل
+import { Synth, Loop, Transport, now } from 'tone';
 
+// هذه "خدعة" بسيطة لتجميع الأدوات في كائن واحد
+// حتى لا تضطر لتغيير باقي الكود في الأسفل
+const Tone = {
+  Synth,
+  Loop,
+  Transport,
+  now
+};
 const GRID_SIZE = 20;
 const CELL_SIZE = 20;
 const INITIAL_SNAKE = [[10, 10]];

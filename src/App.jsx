@@ -1,6 +1,17 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-// استبدل سطر الاستيراد القديم بهذا البلوك بالكامل
-import * as Tone from 'tone';
+
+// 👇👇 انسخ هذا الجزء وضعه بدلاً من سطر import Tone القديم 👇👇
+import { Synth, Loop, Transport, now } from 'tone';
+
+const Tone = {
+  Synth,
+  Loop,
+  Transport,
+  now
+};
+// 👆👆 نهاية الجزء الجديد 👆👆
+
+// ... باقي الكود كما هو تماماً دون أي تغيير ...
 
 
 const GRID_SIZE = 20;
